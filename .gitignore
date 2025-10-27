@@ -33,6 +33,11 @@ build/
 
 ### VS Code ###
 .vscode/
-
 ### Mac OS ###
 .DS_Store
+# 忽略 IntelliJ IDEA 目录
+.idea/
+# 忽略 Maven 编译输出目录
+/target/
+# 忽略其他可能生成的 IDE 文件
+out/
