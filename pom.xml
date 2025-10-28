@@ -14,4 +14,18 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+                <!-- CGLIB库依赖配置 -->
+        <!-- 用于动态代理和字节码生成，常用于AOP编程和框架开发 -->
+        <!-- groupId: 组织标识符，表示该依赖所属的组织 -->
+        <!-- artifactId: 项目标识符，表示具体的库名称 -->
+        <!-- version: 版本号，表示使用的CGLIB版本为3.3.0 -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+
+    </dependencies>
+
 </project>
