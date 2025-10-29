@@ -1,4 +1,4 @@
-package com.practice.CglibDynamicProxy;
+package com.dynamicproxy.CglibDynamicProxy;
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;

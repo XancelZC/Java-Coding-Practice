@@ -1,4 +1,4 @@
-package com.practice.CglibDynamicProxy;
+package com.dynamicproxy.CglibDynamicProxy;
 
 public class UserService {
     public void save(){

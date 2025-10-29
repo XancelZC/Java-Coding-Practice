@@ -1,6 +1,5 @@
-package com.practice.ProxyFactory;
+package com.dynamicproxy.ProxyFactory;
 
-import com.practice.JdkDynamicProxy.JdkDynamicProxy;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;

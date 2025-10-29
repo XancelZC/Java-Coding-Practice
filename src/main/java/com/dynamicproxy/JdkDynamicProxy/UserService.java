@@ -1,4 +1,4 @@
-package com.practice.JdkDynamicProxy;
+package com.dynamicproxy.JdkDynamicProxy;
 
 public interface UserService{
     void save();

@@ -1,4 +1,4 @@
-package com.practice.JdkDynamicProxy;
+package com.dynamicproxy.JdkDynamicProxy;
 
 public class UserServiceImpl implements UserService{
     @Override
