@@ -1,0 +1,33 @@
+package com.dsa;
+
+import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+
+/**
+ * @author gongxuanzhangmelt@gmail.com
+ **/
+class ListTest {
+
+    @Test
+    void operateTest() {
+        List<String> list = new ArrayList<>();
+        for (int i = 0; i < 30; i++) {
+            list.add(String.valueOf(i));
+        }
+        assertEquals(30, list.size());
+        list.remove(15);
+        list.remove("18");
+        assertEquals(28, list.size());
+        assertEquals("16", list.get(15));
+        assertEquals("24", list.get(22));
+
+        list.forEach(System.out::println);
+    }
+
+}
