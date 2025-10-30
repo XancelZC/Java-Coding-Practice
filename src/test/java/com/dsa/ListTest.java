@@ -1,11 +1,6 @@
 package com.dsa;
 
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -16,7 +11,7 @@ class ListTest {
 
     @Test
     void operateTest() {
-        List<String> list = new ArrayList<>();
+        List<String> list = new MyLinkedList<>();
         for (int i = 0; i < 30; i++) {
             list.add(String.valueOf(i));
         }

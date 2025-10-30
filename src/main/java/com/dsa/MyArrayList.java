@@ -2,6 +2,7 @@ package com.dsa;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+import java.util.Objects;
 
 public class MyArrayList<E> implements List<E> {
 
@@ -11,26 +12,27 @@ public class MyArrayList<E> implements List<E> {
     private int size;
 
     @Override
-    public void add(Object element) {
+    public void add(E element) {
         if (size == table.length) {
-            resize(table);
+            resize();
         }
         table[size] = element;
+        size++;
     }
 
-    private void resize(Object[] table) {
+    private void resize() {
         Object[] newTable = new Object[table.length * 2];
         System.arraycopy(table, 0, newTable, 0, table.length);
         this.table = newTable;
     }
 
     @Override
-    public void add(Object element, int index) {
+    public void add(E element, int index) {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException();
         }
         if (size == table.length) {
-            resize(table);
+            resize();
         }
         System.arraycopy(table, index, table, index + 1, size - index);
         table[index] = element;
@@ -44,15 +46,15 @@ public class MyArrayList<E> implements List<E> {
         }
         E removeElement = (E) table[index];
         System.arraycopy(table, index + 1, table, index, size - index - 1);
-        table[size] = null;
         size--;
+        table[size] = null;
         return removeElement;
     }
 
     @Override
-    public boolean remove(Object element) {
+    public boolean remove(E element) {
         for (int i = 0; i < size; i++) {
-            if (element == table[i]) {
+            if (Objects.equals(table[i],element)) {
                 remove(i);
                 return true;
             }
@@ -61,7 +63,7 @@ public class MyArrayList<E> implements List<E> {
     }
 
     @Override
-    public E set(int index, Object element) {
+    public E set(int index, E element) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
@@ -80,7 +82,7 @@ public class MyArrayList<E> implements List<E> {
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
