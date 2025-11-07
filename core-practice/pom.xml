@@ -5,12 +5,6 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-    <packaging>pom</packaging>
-    <modules>
-        <module>core-practice</module>
-        <module>login-demo</module>
-    </modules>
-
     <groupId>com.xzc</groupId>
     <artifactId>Java-Coding-Practice</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -22,7 +16,7 @@
     </properties>
 
     <dependencies>
-        <!-- CGLIB库依赖配置 -->
+                <!-- CGLIB库依赖配置 -->
         <!-- 用于动态代理和字节码生成，常用于AOP编程和框架开发 -->
         <!-- groupId: 组织标识符，表示该依赖所属的组织 -->
         <!-- artifactId: 项目标识符，表示具体的库名称 -->
